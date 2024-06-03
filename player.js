@@ -74,7 +74,7 @@ function initializePlayer(client) {
             .setStyle(ButtonStyle.Primary);
         const clearQueueButton = new ButtonBuilder()
             .setCustomId("clearQueue")
-            .setLabel("Bersihkan 🗑️")
+            .setLabel("Kosongkan 🗑️")
             .setStyle(ButtonStyle.Danger);
 
     
@@ -178,7 +178,7 @@ for (let i = 0; i < pages.length; i++) {
                     iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1230836684774576168/7762-verified-blue.gif?ex=6638b97d&is=663767fd&hm=021725868cbbc66f35d2b980585489f93e9fd366aa57640732dc49e7da9a80ee&', 
                     url: 'https://discord.gg/X6RT5VdJPQ'
                 })
-                .setDescription('**Lagu-lagu di dalam queue berjaya dibersihkan!**');
+                .setDescription('**Lagu-lagu di dalam queue berjaya Dikosongkan!**');
                
     
             await channel.send({ embeds: [queueEmbed] });
