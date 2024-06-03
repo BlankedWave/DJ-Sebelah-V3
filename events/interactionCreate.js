@@ -1,25 +1,3 @@
-/*
-
-  ________.__                        _____.___.___________
- /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
-/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
-\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
- \______  /____(____  /\___  >___  >  / ______|  |____|   
-        \/          \/     \/    \/   \/                  
-
-╔════════════════════════════════════════════════════════════════════════╗
-║                                                                        ║
-║  ## Created by GlaceYT!                                                ║
-║  ## Feel free to utilize any portion of the code                       ║
-║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
-║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
-║                                                                        ║
-╚════════════════════════════════════════════════════════════════════════╝
-
-
-*/
-
-
 const config = require("../config.js");
 const { InteractionType } = require('discord.js');
 const fs = require("fs");
@@ -48,6 +26,20 @@ module.exports = async (client, interaction) => {
               }
             });
           });
+        } else if (interaction?.type === InteractionType.ApplicationCommandAutocomplete) {
+          fs.readdir(config.commandsDir, (err, files) => {
+            if (err) throw err;
+            files.forEach(async (f) => {
+              let props = require(`.${config.commandsDir}/${f}`);
+              if (interaction.commandName === props.name && props.autocomplete) {
+                try {
+                  await props.autocomplete(client, interaction);
+                } catch (e) {
+                  console.error(`❌ Error in autocomplete handler: ${e.message}`);
+                }
+              }
+            });
+          });
         }
       }
 
@@ -57,24 +49,3 @@ module.exports = async (client, interaction) => {
     console.error(e);
   }
 }
-/*
-
-  ________.__                        _____.___.___________
- /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
-/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
-\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
- \______  /____(____  /\___  >___  >  / ______|  |____|   
-        \/          \/     \/    \/   \/                  
-
-╔════════════════════════════════════════════════════════════════════════╗
-║                                                                        ║
-║  ## Created by GlaceYT!                                                ║
-║  ## Feel free to utilize any portion of the code                       ║
-║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
-║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
-║                                                                        ║
-╚════════════════════════════════════════════════════════════════════════╝
-
-
-*/
-
