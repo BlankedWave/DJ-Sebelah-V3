@@ -26,20 +26,6 @@ module.exports = async (client, interaction) => {
               }
             });
           });
-        } else if (interaction?.type === InteractionType.ApplicationCommandAutocomplete) {
-          fs.readdir(config.commandsDir, (err, files) => {
-            if (err) throw err;
-            files.forEach(async (f) => {
-              let props = require(`.${config.commandsDir}/${f}`);
-              if (interaction.commandName === props.name && props.autocomplete) {
-                try {
-                  await props.autocomplete(client, interaction);
-                } catch (e) {
-                  console.error(`❌ Error in autocomplete handler: ${e.message}`);
-                }
-              }
-            });
-          });
         }
       }
 
