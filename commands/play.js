@@ -5,7 +5,7 @@ const queueNames = [];
 
 async function play(client, interaction) {
     try {
-        const query = interaction.options.getString('name'); 
+        const query = interaction.options.getString('nama'); 
 
         const player = client.riffy.createConnection({
             guildId: interaction.guildId,
