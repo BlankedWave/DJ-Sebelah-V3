@@ -1,3 +1,23 @@
+/*
+
+  ________.__                        _____.___.___________
+ /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
+/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
+\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
+ \______  /____(____  /\___  >___  >  / ______|  |____|   
+        \/          \/     \/    \/   \/                  
+
+╔════════════════════════════════════════════════════════════════════════╗
+║                                                                        ║
+║  ## Created by GlaceYT!                                                ║
+║  ## Feel free to utilize any portion of the code                       ║
+║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
+║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
+║                                                                        ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+
+*/
 const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 
 const queueNames = [];
@@ -60,31 +80,31 @@ const embeds = [
     new EmbedBuilder()
         .setColor('#4d9fd6')
         .setAuthor({
-            name: 'Permohonan Telah Dikemaskini!',
+            name: 'Request Update!',
             iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236794583732457473/7828-verify-ak.gif?ex=66394e37&is=6637fcb7&hm=923d3f3b300606a2ae4ceb7bae980fd533a4c5ee2cf73111569a892a595f1f69&', 
             url: 'https://discord.gg/xQF9f9yUEM'
         })
-        .setDescription('➡️ **Permohonan and telah berjaya diproses.**\n➡️** Sila guna butang untuk mengawal radio ini**'),
+        .setDescription('➡️ **Your request has been successfully processed.**\n➡️** Please use the buttons to control the queue**'),
 
  
     new EmbedBuilder()
     .setColor('#ffea00')
     .setAuthor({
-        name: 'Permohonan Telah Dikemaskini!',
+        name: 'Request Update!',
         iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236802032938127470/4104-verify-yellow.gif?ex=66395527&is=663803a7&hm=71a7fba7f91897e52d9645b45d85d3da0ff97af2b63d10960004e68ff40d9c3b&', 
         url: 'https://discord.gg/xQF9f9yUEM'
     })
-    .setDescription('➡️ **Permohonan and telah berjaya diproses.**\n➡️** Sila guna butang untuk mengawal radio ini**'),
+    .setDescription('➡️ **Your request has been successfully processed.**\n➡️** Please use the buttons to control the queue**'),
 
   
     new EmbedBuilder()
     .setColor('#FF0000')
     .setAuthor({
-        name: 'Permohonan Telah Dikemaskini!',
+        name: 'Request Update!',
         iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236802049190920202/4104-verify-red.gif?ex=6639552b&is=663803ab&hm=8dbc851fe56441b916a0044152dd517ed26434a11ee506518382f380c527c3bd&', 
         url: 'https://discord.gg/xQF9f9yUEM'
     })
-    .setDescription('➡️ **Permohonan and telah berjaya diproses.**\n➡️** Sila guna butang untuk mengawal radio ini**')
+    .setDescription('➡️ **Your request has been successfully processed.**\n➡️** Please use the buttons to control the queue**')
 ];
 
 
@@ -107,14 +127,35 @@ await interaction.followUp({ embeds: [embeds[randomIndex]] });
 
 module.exports = {
     name: "play",
-    description: "Mainkan lagu pilihan anda",
+    description: "Add options too",
     permissions: "0x0000000000000800",
     options: [{
         name: 'name',
-        description: 'Masukkkan tajuk lagu / link atau playlist',
+        description: 'enter song name / link or playlist',
         type: ApplicationCommandOptionType.String,
         required: true
     }],
     run: play,
     queueNames: queueNames
 };
+
+/*
+
+  ________.__                        _____.___.___________
+ /  _____/|  | _____    ____  ____   \__  |   |\__    ___/
+/   \  ___|  | \__  \ _/ ___\/ __ \   /   |   |  |    |   
+\    \_\  \  |__/ __ \\  \__\  ___/   \____   |  |    |   
+ \______  /____(____  /\___  >___  >  / ______|  |____|   
+        \/          \/     \/    \/   \/                  
+
+╔════════════════════════════════════════════════════════════════════════╗
+║                                                                        ║
+║  ## Created by GlaceYT!                                                ║
+║  ## Feel free to utilize any portion of the code                       ║
+║  ## DISCORD :  https://discord.com/invite/xQF9f9yUEM                   ║
+║  ## YouTube : https://www.youtube.com/@GlaceYt                         ║
+║                                                                        ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+
+*/
