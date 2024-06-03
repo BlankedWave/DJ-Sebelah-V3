@@ -112,7 +112,7 @@ function initializePlayer(client) {
                     url: 'https://discord.gg/X6RT5VdJPQ'
                 })
             .setColor("#00FF00")
-            .setTitle("**Queue loop dah dihidupkan!**")
+            .setTitle("**Loop dah Dihidupkan!**")
          
 
         await channel.send({ embeds: [loopEmbed] });
