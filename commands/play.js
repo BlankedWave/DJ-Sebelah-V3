@@ -110,7 +110,7 @@ module.exports = {
     description: "Mainkan lagu pilihan anda",
     permissions: "0x0000000000000800",
     options: [{
-        name: 'Tajuk Lagu',
+        name: 'name',
         description: 'Masukkkan tajuk lagu / link atau playlist',
         type: ApplicationCommandOptionType.String,
         required: true
