@@ -17,7 +17,7 @@ module.exports = {
       .setTitle('💎 DJ Sebelah')
       .setDescription('Selamat datang ke Sebelah FM!\n\n- Ini adalah semua command yang ada:\n\n' +
         '**/play :** Mula mainkan lagu.\n' +
-        '**/ping :** check bot latency.\n' +
+        '**/ping :** Check bot latency.\n' +
         '**/support :** Menunjukkan maklumat support server');
 
       return interaction.reply({ embeds: [embed] });
