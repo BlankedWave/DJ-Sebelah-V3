@@ -14,7 +14,7 @@ module.exports = {
 
       const embed = new EmbedBuilder()
          .setColor('#0099ff')
-      .setTitle('💎 DJ Sebelah')
+      .setTitle('💁🏻‍♀️ DJ Sebelah')
       .setDescription('Selamat datang ke Sebelah FM!\n\n- Ini adalah command yang dapat digunakan:\n\n' +
         '**/play :** Mula memainkan lagu anda.\n' +
         '**/ping :** Check latency bot.\n' +
