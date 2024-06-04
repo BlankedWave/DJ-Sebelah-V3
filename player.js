@@ -178,7 +178,7 @@ for (let i = 0; i < pages.length; i++) {
                     iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1230836684774576168/7762-verified-blue.gif?ex=6638b97d&is=663767fd&hm=021725868cbbc66f35d2b980585489f93e9fd366aa57640732dc49e7da9a80ee&', 
                     url: 'https://discord.gg/X6RT5VdJPQ'
                 })
-                .setDescription('**Lagu-lagu di dalam senarai berjaya Dikosongkan!**');
+                .setDescription('**Lagu-lagu di dalam Senarai berjaya Dikosongkan!**');
                
     
             await channel.send({ embeds: [queueEmbed] });
