@@ -20,7 +20,7 @@ module.exports = {
               url: 'https://discord.gg/X6RT5VdJPQ'
           })
             .setDescription(`👋🏻**Salam Sebelah Wahai Sahabat Organik Sekalian👋🏻**!\n
-            🕺🏻 **DJ Sebelah merupakan DJ yang telah dilantik oleh <@267958390389604362> untuk menyajikan lagu kegemaran anda di segenap server.** \n
+            🕺🏻 **<@1166579917576740905> merupakan DJ yang telah dilantik oleh <@267958390389604362> untuk menyajikan lagu kegemaran anda di segenap server.** \n
             ➡️ **Sertai Discord server kami untuk sebarang info dan update:**\n- Discord - ${supportServerLink}\n\n`)
             .setImage('https://media.tenor.com/WDwFEWQxdFAAAAAi/fish.gif')
             .setTimestamp();
