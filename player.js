@@ -44,7 +44,7 @@ function initializePlayer(client) {
             iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236664581364125787/music-play.gif?ex=6638d524&is=663783a4&hm=5179f7d8fcd18edc1f7d0291bea486b1f9ce69f19df8a96303b75505e18baa3a&', 
             url: 'https://discord.gg/X6RT5VdJPQ'
         })
-        .setDescription(`➡️ **Nama Lagu:** [${track.info.title}](${track.info.uri})\n\n➡️ **Penyanyi      :** ${track.info.author}\n\n➡️ **Platform    :** YouTube/Spotify/SoundCloud`)
+        .setDescription(`🎵 **Lagu:** [${track.info.title}](${track.info.uri})\n\n🎤 **Penyanyi:** ${track.info.author}\n\n🎧 **Platform:** YouTube/Spotify/SoundCloud`)
 
         .setImage(`https://cdn.discordapp.com/attachments/1004341381784944703/1165201249331855380/RainbowLine.gif?ex=663939fa&is=6637e87a&hm=e02431de164b901e07b55d8f8898ca5b1b2832ad11985cecc3aa229a7598d610&`)
         .setThumbnail(track.info.thumbnail)
@@ -200,7 +200,7 @@ for (let i = 0; i < pages.length; i++) {
             player.destroy();
             const queueEmbed = new EmbedBuilder()
                 .setColor("#0099ff")
-                .setDescription('**Lagu-lagu di dalam Senarai sudah tiada!❎    Gerak lu pape roger!👋🏻**');
+                .setDescription('**Lagu-lagu di dalam Senarai sudah tiada!❎ Gerak lu pape roger!👋🏻**');
                
     
             await channel.send({ embeds: [queueEmbed] });
