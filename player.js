@@ -200,7 +200,7 @@ for (let i = 0; i < pages.length; i++) {
             player.destroy();
             const queueEmbed = new EmbedBuilder()
                 .setColor("#0099ff")
-                .setDescription('**Lagu-lagu di dalam senarai sudah tiada! Gerak lu pape roger!**');
+                .setDescription('**Lagu-lagu di dalam Senarai sudah tiada!📄❎ Gerak lu pape roger!👋🏻**');
                
     
             await channel.send({ embeds: [queueEmbed] });
