@@ -135,7 +135,7 @@ function initializePlayer(client) {
                 const loopEmbed = new EmbedBuilder()
                 .setColor("#0099ff")
                 .setAuthor({
-                    name: 'Loop Telah Dimatikan',
+                    name: 'Loop Telah Dimatikan!',
                     iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1230836684774576168/7762-verified-blue.gif?ex=6638b97d&is=663767fd&hm=021725868cbbc66f35d2b980585489f93e9fd366aa57640732dc49e7da9a80ee&', 
                     url: 'https://discord.gg/X6RT5VdJPQ'
                 })
@@ -200,7 +200,7 @@ for (let i = 0; i < pages.length; i++) {
             player.destroy();
             const queueEmbed = new EmbedBuilder()
                 .setColor("#0099ff")
-                .setDescription('**Lagu-lagu di dalam Senarai sudah tiada!📄❎ Gerak lu pape roger!👋🏻**');
+                .setDescription('**Lagu-lagu di dalam Senarai sudah tiada!❎    Gerak lu pape roger!👋🏻**');
                
     
             await channel.send({ embeds: [queueEmbed] });
