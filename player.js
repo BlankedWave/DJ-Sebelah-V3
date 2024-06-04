@@ -40,27 +40,27 @@ function initializePlayer(client) {
         const embed = new EmbedBuilder()
         .setColor("#0099ff")
         .setAuthor({
-            name: 'Sedang Dimainkan',
+            name: 'Sedang Memainkan',
             iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236664581364125787/music-play.gif?ex=6638d524&is=663783a4&hm=5179f7d8fcd18edc1f7d0291bea486b1f9ce69f19df8a96303b75505e18baa3a&', 
             url: 'https://discord.gg/X6RT5VdJPQ'
         })
-        .setDescription(`➡️ **Nama Lagu:** [${track.info.title}](${track.info.uri})\n➡️ **Penyanyi:** ${track.info.author}\n➡️ **Platform :** YouTube, Spotify, SoundCloud`)
+        .setDescription(`➡️ **Nama Lagu:** [${track.info.title}](${track.info.uri})\n\n➡️ **Penyanyi   :** ${track.info.author}\n\n➡️ **Platform  :** YouTube/Spotify/SoundCloud`)
 
         .setImage(`https://cdn.discordapp.com/attachments/1004341381784944703/1165201249331855380/RainbowLine.gif?ex=663939fa&is=6637e87a&hm=e02431de164b901e07b55d8f8898ca5b1b2832ad11985cecc3aa229a7598d610&`)
         .setThumbnail(track.info.thumbnail)
         .setTimestamp()
-        .setFooter({ text: 'Sila gunakan butang di bawah untuk mengawal radio ini!'}); 
+        .setFooter({ text: 'Sila gunakan butang di bawah ini untuk mengawal radio!'}); 
 
 
 
         const queueLoopButton = new ButtonBuilder()
             .setCustomId("loopQueue")
-            .setLabel("Loop On 🟢")
+            .setLabel("Ulang 🔁")
             .setStyle(ButtonStyle.Primary);
 
         const disableLoopButton = new ButtonBuilder()
             .setCustomId("disableLoop")
-            .setLabel("Loop Off 🔴")
+            .setLabel("Matikan Ulang ❌")
             .setStyle(ButtonStyle.Primary);
 
         const skipButton = new ButtonBuilder()
@@ -70,7 +70,7 @@ function initializePlayer(client) {
 
         const showQueueButton = new ButtonBuilder()
             .setCustomId("showQueue")
-            .setLabel("Queue 🎶")
+            .setLabel("Senarai 🎶")
             .setStyle(ButtonStyle.Primary);
         const clearQueueButton = new ButtonBuilder()
             .setCustomId("clearQueue")
@@ -112,7 +112,7 @@ function initializePlayer(client) {
                     url: 'https://discord.gg/X6RT5VdJPQ'
                 })
             .setColor("#00FF00")
-            .setTitle("**Loop dah Dihidupkan!**")
+            .setTitle("**Loop telah Dihidupkan!**")
          
 
         await channel.send({ embeds: [loopEmbed] });
@@ -135,11 +135,11 @@ function initializePlayer(client) {
                 const loopEmbed = new EmbedBuilder()
                 .setColor("#0099ff")
                 .setAuthor({
-                    name: 'Loop Dimatikan',
+                    name: 'Loop telah Dimatikan',
                     iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1230836684774576168/7762-verified-blue.gif?ex=6638b97d&is=663767fd&hm=021725868cbbc66f35d2b980585489f93e9fd366aa57640732dc49e7da9a80ee&', 
                     url: 'https://discord.gg/X6RT5VdJPQ'
                 })
-                .setDescription('**Loop dah Dimatikan untuk queue dan sebuah Lagu!**');
+                .setDescription('**Loop sudah Dimatikan untuk Senarai Sekarang!**');
                   
     
             await channel.send({ embeds: [loopEmbed] });
@@ -163,7 +163,7 @@ for (let i = 0; i < pages.length; i++) {
 
     const queueEmbed = new EmbedBuilder()
         .setColor("#0099ff")
-        .setTitle(`Queue Sekarang (Halaman ${i + 1}/${pages.length})`)
+        .setTitle(`Senarai Sekarang (Halaman ${i + 1}/${pages.length})`)
         .setDescription(numberedSongs);
 
     await channel.send({ embeds: [queueEmbed] });
@@ -174,11 +174,11 @@ for (let i = 0; i < pages.length; i++) {
                 const queueEmbed = new EmbedBuilder()
                 .setColor("#0099ff")
                 .setAuthor({
-                    name: 'Queue Dibersihkan',
+                    name: 'Senarai Dikosongkan',
                     iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1230836684774576168/7762-verified-blue.gif?ex=6638b97d&is=663767fd&hm=021725868cbbc66f35d2b980585489f93e9fd366aa57640732dc49e7da9a80ee&', 
                     url: 'https://discord.gg/X6RT5VdJPQ'
                 })
-                .setDescription('**Lagu-lagu di dalam queue berjaya Dikosongkan!**');
+                .setDescription('**Lagu-lagu di dalam senarai berjaya Dikosongkan!**');
                
     
             await channel.send({ embeds: [queueEmbed] });
@@ -200,7 +200,7 @@ for (let i = 0; i < pages.length; i++) {
             player.destroy();
             const queueEmbed = new EmbedBuilder()
                 .setColor("#0099ff")
-                .setDescription('**Lagu di dalam queue tamat! Disconnecting Bot!**');
+                .setDescription('**Lagu-lagu di dalam senarai sudah tiada! Gerak lu pape roger!**');
                
     
             await channel.send({ embeds: [queueEmbed] });
