@@ -5,7 +5,7 @@ const queueNames = [];
 
 async function play(client, interaction) {
     try {
-        const query = interaction.options.getString('nama'); 
+        const query = interaction.options.getString('lagu'); 
 
         const player = client.riffy.createConnection({
             guildId: interaction.guildId,
@@ -61,31 +61,31 @@ const embeds = [
     new EmbedBuilder()
         .setColor('#4d9fd6')
         .setAuthor({
-            name: 'Permohonan Telah Dikemaskini!',
+            name: 'Lagu Telah Ditambah Ke Dalam Senarai!',
             iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236794583732457473/7828-verify-ak.gif?ex=66394e37&is=6637fcb7&hm=923d3f3b300606a2ae4ceb7bae980fd533a4c5ee2cf73111569a892a595f1f69&', 
             url: 'https://discord.gg/X6RT5VdJPQ'
         })
-        .setDescription('➡️ **Permohonan anda telah berjaya diproses.**\n➡️** Sila gunakan butang di bawah untuk mengawal radio ini.**'),
+        .setDescription('➡️ **Lagu anda telah berjaya diproses.**\n➡️** Marilah berjoget angan tak sudah!**'),
 
  
     new EmbedBuilder()
     .setColor('#ffea00')
     .setAuthor({
-        name: 'Permohonan Telah Dikemaskini!',
+        name: 'Lagu Telah Ditambah Ke Dalam Senarai!',
         iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236802032938127470/4104-verify-yellow.gif?ex=66395527&is=663803a7&hm=71a7fba7f91897e52d9645b45d85d3da0ff97af2b63d10960004e68ff40d9c3b&', 
         url: 'https://discord.gg/X6RT5VdJPQ'
     })
-    .setDescription('➡️ **Permohonan anda telah berjaya diproses.**\n➡️** Sila gunakan butang di bawah untuk mengawal radio ini.**'),
+    .setDescription('➡️ **Lagu anda telah berjaya diproses.**\n➡️** Marilah berjoget angan tak sudah!**'),
 
   
     new EmbedBuilder()
     .setColor('#FF0000')
     .setAuthor({
-        name: 'Permohonan Telah Dikemaskini!',
+        name: 'Lagu Telah Ditambah Ke Dalam Senarai!',
         iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236802049190920202/4104-verify-red.gif?ex=6639552b&is=663803ab&hm=8dbc851fe56441b916a0044152dd517ed26434a11ee506518382f380c527c3bd&', 
         url: 'https://discord.gg/X6RT5VdJPQ'
     })
-    .setDescription('➡️ **Permohonan anda telah berjaya diproses.**\n➡️** Sila gunakan butang di bawah untuk mengawal radio ini.**')
+    .setDescription('➡️ **Lagu anda telah berjaya diproses.**\n➡️** Marilah berjoget angan tak sudah!**')
 ];
 
 
@@ -99,7 +99,7 @@ await interaction.followUp({ embeds: [embeds[randomIndex]] });
         const errorEmbed = new EmbedBuilder()
             .setColor('#ff0000')
             .setTitle('Error')
-            .setDescription('Terdapat ralat ketika memproses permohonan anda.');
+            .setDescription('Terdapat ralat ketika memproses lagu anda.');
 
      
         await interaction.editReply({ embeds: [errorEmbed] });
@@ -108,10 +108,10 @@ await interaction.followUp({ embeds: [embeds[randomIndex]] });
 
 module.exports = {
     name: "play",
-    description: "Mainkan lagu",
+    description: "Memainkan lagu anda",
     permissions: "0x0000000000000800",
     options: [{
-        name: 'nama',
+        name: 'lagu',
         description: 'Masukkkan nama lagu / link atau playlist',
         type: ApplicationCommandOptionType.String,
         required: true
