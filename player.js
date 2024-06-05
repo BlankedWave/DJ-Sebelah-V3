@@ -6,10 +6,10 @@ const { queueNames } = require("./commands/play");
 function initializePlayer(client) {
     const nodes = [  //CHANGE NODES HERE!!
   {
-host : "ether.lunarnodes.xyz",
-port : 6969,
-password : "lunarnodes.xyz",
-secure : "false"
+    host: "lavalink.oryzen.xyz",
+    port: 80, 
+    password: "oryzen.xyz", 
+     secure: false
   },
     ];
 
