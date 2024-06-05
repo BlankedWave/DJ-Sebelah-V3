@@ -6,9 +6,9 @@ const { queueNames } = require("./commands/play");
 function initializePlayer(client) {
     const nodes = [  //CHANGE NODES HERE!!
   {
-    host: "node1.paradisehost.xyz",
-    port: 27185, 
-    password: "Lavalinkhoster123", 
+    host: "us1.lavalink.creavite.co",
+    port: 20080, 
+    password: "auto.creavite.co", 
      secure: false
   },
     ];
