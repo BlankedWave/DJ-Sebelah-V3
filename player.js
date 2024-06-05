@@ -6,10 +6,10 @@ const { queueNames } = require("./commands/play");
 function initializePlayer(client) {
     const nodes = [  //CHANGE NODES HERE!!
   {
-            host: "lava-v3.ajieblogs.eu.org",
-            password: "https://dsc.gg/ajidevserver",
-            port: 443,
-            secure: true
+    host: "lavalink.oryzen.xyz",
+    port: 80, 
+    password: "oryzen.xyz", 
+     secure: false
   },
     ];
 
