@@ -4,13 +4,13 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("
 const { queueNames } = require("./commands/play"); 
 
 function initializePlayer(client) {
-    const nodes = [
-        {
-            host: "lava-v4.ajieblogs.eu.org",
-            password: "https://dsc.gg/ajidevserver",
-            port: 443,
-            secure: true
-        },
+    const nodes = [  //CHANGE NODES HERE!!
+  {
+    host: "lavalink.oryzen.xyz",
+    port: 80, 
+    password: "oryzen.xyz", 
+     secure: false
+  },
     ];
 
     client.riffy = new Riffy(client, nodes, {
