@@ -6,9 +6,9 @@ const { queueNames } = require("./commands/play");
 function initializePlayer(client) {
     const nodes = [  //CHANGE NODES HERE!!
   {
-    host: "45.43.163.132",
-    port: 88, 
-    password: "stonemusicgay", 
+    host: "lavalink.ddns.net",
+    port: 7106, 
+    password: "discord.gg/FqEQtEtUc9", 
      secure: false
   },
     ];
