@@ -6,10 +6,10 @@ const { queueNames } = require("./commands/play");
 function initializePlayer(client) {
     const nodes = [  //CHANGE NODES HERE!!
   {
-    host: "us1.lavalink.creavite.co",
-    port: 20080, 
-    password: "auto.creavite.co", 
-     secure: false
+    host: "lavalink.gglvxd.eu.org",
+    port: 443, 
+    password: "https://dsc.gg/idiotspawnpoint", 
+     secure: true
   },
     ];
 
