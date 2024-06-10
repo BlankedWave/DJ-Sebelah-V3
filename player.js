@@ -60,7 +60,7 @@ function initializePlayer(client) {
 
         const disableLoopButton = new ButtonBuilder()
             .setCustomId("disableLoop")
-            .setLabel("Matikan Ulang ❌")
+            .setLabel("Teruskan ➡️")
             .setStyle(ButtonStyle.Primary);
 
         const skipButton = new ButtonBuilder()
