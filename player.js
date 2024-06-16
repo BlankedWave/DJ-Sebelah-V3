@@ -185,8 +185,9 @@ function initializePlayer(client) {
                 console.log(`Collected ${collected.size} interactions.`);
             });
         });
+
     
-/*        client.riffy.on("queueEnd", async (player) => {
+        client.riffy.on("queueEnd", async (player) => {
             const channel = client.channels.cache.get(player.textChannel);
             const autoplay = false;
     
@@ -196,15 +197,15 @@ function initializePlayer(client) {
                 player.destroy();
                 const queueEmbed = new EmbedBuilder()
                     .setColor("#0099ff")
-                    .setDescription('**Queue Songs ended! Disconnecting Bot!**');
+                    .setDescription('**Lagu sudah habis, DJ akan meninggalkan channel ini! 👋🏻**');
     
     
                 await channel.send({ embeds: [queueEmbed] });
             }
         });
-*/
 
 
+/*
         client.riffy.on("queueEnd", (player) => {
             const channel = client.channels.cache.get(player.textChannel);
 
@@ -225,7 +226,7 @@ function initializePlayer(client) {
                 player.disconnect();
             }, 60000);
         });
-    
+    */
     
         function setLoop(player, loopType) {
             if (loopType === "queue") {
