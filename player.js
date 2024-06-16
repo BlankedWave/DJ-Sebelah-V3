@@ -21,7 +21,7 @@ function initializePlayer(client) {
             if (guild) guild.shard.send(payload);
         },
         defaultSearchPlatform: "ytmsearch",
-        restVersion: "v"
+        restVersion: "v4"
     });
 
     client.riffy.on("nodeConnect", node => {
