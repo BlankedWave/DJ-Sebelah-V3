@@ -20,8 +20,8 @@ function initializePlayer(client) {
             const guild = client.guilds.cache.get(guildId);
             if (guild) guild.shard.send(payload);
         },
-        defaultSearchPlatform: "spsearch",
-        restVersion: "v4"
+        defaultSearchPlatform: "ytmsearch",
+        restVersion: "v"
     });
 
     client.riffy.on("nodeConnect", node => {
@@ -42,11 +42,12 @@ function initializePlayer(client) {
                 iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1236664581364125787/music-play.gif?ex=6638d524&is=663783a4&hm=5179f7d8fcd18edc1f7d0291bea486b1f9ce69f19df8a96303b75505e18baa3a&',
                 url: 'https://discord.gg/X6RT5VdJPQ'
             })
-            .setDescription(`🎵 **Lagu:** [${track.info.title}](${track.info.uri})\n\n🎤 **Penyanyi:** ${track.info.author}\n\n🎧 **Platform:** YouTube/Spotify/SoundCloud`)
+            .setDescription(`🎵 **Lagu:** [${track.info.title}](${track.info.uri})\n\n🎤 **Penyanyi:** ${track.info.author}\n\n🎧 **Platform:** YouTube, Spotify, SoundCloud`)
             .setImage(`https://cdn.discordapp.com/attachments/1004341381784944703/1165201249331855380/RainbowLine.gif?ex=663939fa&is=6637e87a&hm=e02431de164b901e07b55d8f8898ca5b1b2832ad11985cecc3aa229a7598d610&`)
             .setThumbnail(track.info.thumbnail)
             .setTimestamp()
             .setFooter({ text: 'Sila gunakan butang di bawah ini untuk mengawal radio!' });
+
 
         const queueLoopButton = new ButtonBuilder()
             .setCustomId("loopQueue")
@@ -67,20 +68,21 @@ function initializePlayer(client) {
             .setCustomId("showQueue")
             .setLabel("Senarai 🎶")
             .setStyle(ButtonStyle.Primary);
-
         const clearQueueButton = new ButtonBuilder()
             .setCustomId("clearQueue")
             .setLabel("Kosongkan 🗑️")
             .setStyle(ButtonStyle.Danger);
 
+
         const actionRow = new ActionRowBuilder()
             .addComponents(queueLoopButton, disableLoopButton, showQueueButton, clearQueueButton, skipButton);
 
+
         const message = await channel.send({ embeds: [embed], components: [actionRow] });
+
 
         const filter = i => i.customId === 'loopQueue' || i.customId === 'skipTrack' || i.customId === 'disableLoop' || i.customId === 'showQueue' || i.customId === 'clearQueue';
         const collector = message.createMessageComponentCollector({ filter, time: 180000 });
-
         setTimeout(() => {
             const disabledRow = new ActionRowBuilder()
                 .addComponents(
@@ -91,10 +93,10 @@ function initializePlayer(client) {
                     clearQueueButton.setDisabled(true)
                 );
 
+
             message.edit({ components: [disabledRow] })
                 .catch(console.error);
         }, 180000);
-
         collector.on('collect', async i => {
             await i.deferUpdate();
             if (i.customId === 'loopQueue') {
@@ -106,7 +108,8 @@ function initializePlayer(client) {
                         url: 'https://discord.gg/X6RT5VdJPQ'
                     })
                     .setColor("#00FF00")
-                    .setTitle("**Loop sudah Dihidupkan untuk Senarai Sekarang!**");
+                    .setTitle("**Loop sudah Dihidupkan untuk Senarai lagu yang sedia ada!**")
+
 
                 await channel.send({ embeds: [loopEmbed] });
             } else if (i.customId === 'skipTrack') {
@@ -116,10 +119,11 @@ function initializePlayer(client) {
                     .setAuthor({
                         name: 'Lagu Dilangkau',
                         iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157269773118357604/giphy.gif?ex=6517fef6&is=6516ad76&hm=f106480f7d017a07f75d543cf545bbea01e9cf53ebd42020bd3b90a14004398e&',
-                        url: 'https://discord.gg/FUEHs7RCqz'
+                        url: 'https://discord.gg/X6RT5VdJPQ'
                     })
                     .setTitle("**Radio akan memainkan lagu yang seterusnya!**")
                     .setTimestamp();
+
 
                 await channel.send({ embeds: [skipEmbed] });
             } else if (i.customId === 'disableLoop') {
@@ -131,88 +135,124 @@ function initializePlayer(client) {
                         iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1230836684774576168/7762-verified-blue.gif?ex=6638b97d&is=663767fd&hm=021725868cbbc66f35d2b980585489f93e9fd366aa57640732dc49e7da9a80ee&',
                         url: 'https://discord.gg/X6RT5VdJPQ'
                     })
-                    .setDescription('**Loop sudah Dimatikan untuk Senarai Sekarang!**');
+                    .setDescription('**Loop sudah Dimatikan untuk Senarai yang sedia ada!**');
+                    
 
-                await channel.send({ embeds: [loopEmbed] });
-            } else if (i.customId === 'showQueue') {
-                const pageSize = 10;
-                const queueMessage = queueNames.length > 0 ?
-                    queueNames.map((song, index) => `${index + 1}. ${song}`).join('\n') :
-                    "The queue is empty.";
-
-                const pages = [];
-                for (let i = 0; i < queueNames.length; i += pageSize) {
-                    const page = queueNames.slice(i, i + pageSize);
-                    pages.push(page);
-                }
-
-                for (let i = 0; i < pages.length; i++) {
-                    const numberedSongs = pages[i].map((song, index) => `${index + 1}. ${song}`).join('\n');
-
+                    await channel.send({ embeds: [loopEmbed] });
+                } else if (i.customId === 'showQueue') {
+    
+                    const pageSize = 10;
+    
+                    const queueMessage = queueNames.length > 0 ?
+                        queueNames.map((song, index) => `${index + 1}. ${song}`).join('\n') :
+                        "Senarai adalah kosong.";
+    
+    
+                    const pages = [];
+                    for (let i = 0; i < queueNames.length; i += pageSize) {
+                        const page = queueNames.slice(i, i + pageSize);
+                        pages.push(page);
+                    }
+    
+                    for (let i = 0; i < pages.length; i++) {
+                        const numberedSongs = pages[i].map((song, index) => `${index + 1}. ${song}`).join('\n');
+    
+                        const queueEmbed = new EmbedBuilder()
+                            .setColor("#0099ff")
+                            .setTitle(`Senarai semasa (Halaman ${i + 1}/${pages.length})`)
+                            .setDescription(numberedSongs);
+    
+                        await channel.send({ embeds: [queueEmbed] });
+                    }
+    
+                } else if (i.customId === 'clearQueue') {
+                    clearQueue(player);
                     const queueEmbed = new EmbedBuilder()
                         .setColor("#0099ff")
-                        .setTitle(`Senarai Sekarang (Halaman ${i + 1}/${pages.length})`)
-                        .setDescription(numberedSongs);
-
+                        .setAuthor({
+                            name: 'Senarai Dikosongkan',
+                            iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1230836684774576168/7762-verified-blue.gif?ex=6638b97d&is=663767fd&hm=021725868cbbc66f35d2b980585489f93e9fd366aa57640732dc49e7da9a80ee&',
+                            url: 'https://discord.gg/X6RT5VdJPQ'
+                        })
+                        .setDescription('**Lagu-lagu di dalam Senarai berjaya Dikosongkan!**');
+    
+    
                     await channel.send({ embeds: [queueEmbed] });
                 }
-            } else if (i.customId === 'clearQueue') {
-                clearQueue(player);
+            });
+    
+            collector.on('end', collected => {
+                console.log(`Collected ${collected.size} interactions.`);
+            });
+        });
+    
+/*        client.riffy.on("queueEnd", async (player) => {
+            const channel = client.channels.cache.get(player.textChannel);
+            const autoplay = false;
+    
+            if (autoplay) {
+                player.autoplay(player);
+            } else {
+                player.destroy();
                 const queueEmbed = new EmbedBuilder()
                     .setColor("#0099ff")
-                    .setAuthor({
-                        name: 'Senarai Dikosongkan',
-                        iconURL: 'https://cdn.discordapp.com/attachments/1230824451990622299/1230836684774576168/7762-verified-blue.gif?ex=6638b97d&is=663767fd&hm=021725868cbbc66f35d2b980585489f93e9fd366aa57640732dc49e7da9a80ee&',
-                        url: 'https://discord.gg/X6RT5VdJPQ'
-                    })
-                    .setDescription('**Lagu-lagu di dalam Senarai berjaya Dikosongkan!**');
-
+                    .setDescription('**Queue Songs ended! Disconnecting Bot!**');
+    
+    
                 await channel.send({ embeds: [queueEmbed] });
             }
         });
+*/
 
-        collector.on('end', collected => {
-            console.log(`Collected ${collected.size} interactions.`);
+
+        client.riffy.on("queueEnd", (player) => {
+            const channel = client.channels.cache.get(player.textChannel);
+
+            const embed = new EmbedBuilder()
+                .setColor("#0099ff")
+                .setAuthor({
+                    name: 'Senarai Tamat',
+                    iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157254651760211978/21561-check-green.gif?ex=6638bded&is=66376c6d&hm=103ca7d68bfc20293f49da679dfc8bb82a44af47b7d388e3b2dd618cf81e52f6&',
+                    url: 'https://discord.gg/X6RT5VdJPQ'
+                })
+                .setDescription("**Radio akan meninggalkan channel dalam masa 10 minit**")
+                .setFooter({ text: 'Jemput rakan anda untuk mendengar bersama!' })
+                .setTimestamp();
+
+            channel.send({ embeds: [embed] });
+
+            setTimeout(() => {
+                player.disconnect();
+            }, 600000);
         });
-    });
-
-    client.riffy.on("queueEnd", (player) => {
-        const channel = client.channels.cache.get(player.textChannel);
-
-        const embed = new EmbedBuilder()
-            .setColor("#0099ff")
-            .setAuthor({
-                name: 'Senarai Tamat',
-                iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157254651760211978/21561-check-green.gif?ex=6638bded&is=66376c6d&hm=103ca7d68bfc20293f49da679dfc8bb82a44af47b7d388e3b2dd618cf81e52f6&',
-                url: 'https://discord.gg/FUEHs7RCqz'
-            })
-            .setDescription("**Radio akan meninggalkan channel dalam masa 5 minit**")
-            .setFooter({ text: 'Jemput rakan anda untuk mendengar bersama!' })
-            .setTimestamp();
-
-        channel.send({ embeds: [embed] });
-
-        setTimeout(() => {
-            player.disconnect();
-        }, 300000);
-    });
-}
-
-function setLoop(player, mode) {
-    if (mode === 'queue') {
-        player.setQueueRepeat(true);
-        player.setTrackRepeat(false);
-    } else if (mode === 'track') {
-        player.setQueueRepeat(false);
-        player.setTrackRepeat(true);
-    } else {
-        player.setQueueRepeat(false);
-        player.setTrackRepeat(false);
+    
+    
+        function setLoop(player, loopType) {
+            if (loopType === "queue") {
+                player.setLoop("queue");
+            } else {
+                player.setLoop("none");
+            }
+        }
+    
+    
+        function clearQueue(player) {
+            player.queue.clear();
+            queueNames.length = 0;
+        }
+    
+    
+        function showQueue(channel, queue) {
+            const queueList = queue.map((track, index) => `${index + 1}. ${track.info.title}`).join('\n');
+            const queueEmbed = new EmbedBuilder()
+                .setColor("#0099ff")
+                .setTitle("Senarai")
+                .setDescription(queueList);
+            channel.send({ embeds: [queueEmbed] });
+        }
+    
+        module.exports = { initializePlayer, setLoop, clearQueue, showQueue };
     }
-}
-
-function clearQueue(player) {
-    player.queue.clear();
-}
-
-module.exports = { initializePlayer };
+    
+    module.exports = { initializePlayer };
+    
