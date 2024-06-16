@@ -212,11 +212,11 @@ function initializePlayer(client) {
                 .setColor("#0099ff")
                 .setAuthor({
                     name: 'Senarai Tamat',
-                    iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157254651760211978/21561-check-green.gif?ex=6638bded&is=66376c6d&hm=103ca7d68bfc20293f49da679dfc8bb82a44af47b7d388e3b2dd618cf81e52f6&',
+                    iconURL: 'https://64.media.tumblr.com/55f80a38a4ec003e4926138cf2831e20/tumblr_om086g92Eq1runoqyo7_250.gif',
                     url: 'https://discord.gg/X6RT5VdJPQ'
                 })
-                .setDescription("**Radio akan meninggalkan channel dalam masa 10 minit**")
-                .setFooter({ text: 'Jemput rakan anda untuk mendengar bersama!' })
+                .setDescription("**DJ akan meninggalkan channel ini dalam masa 10 minit**")
+                .setFooter({ text: 'Jemputlah rakan anda untuk mendengar bersama!' })
                 .setTimestamp();
 
             channel.send({ embeds: [embed] });
