@@ -215,15 +215,15 @@ function initializePlayer(client) {
                     iconURL: 'https://cdn.discordapp.com/emojis/867096426194534441.gif?size=48&quality=lossless&name=CWS_Timer%7E1',
                     url: 'https://discord.gg/X6RT5VdJPQ'
                 })
-                .setDescription("**DJ akan meninggalkan channel ini dalam masa 5 minit**")
-                .setFooter({ text: 'Jemputlah rakan anda untuk mendengar bersama!' })
+                .setDescription("**DJ akan meninggalkan channel ini dalam masa 1 minit!**")
+                .setFooter({ text: 'Ajaklah rakan anda untuk mendengar bersama!' })
                 .setTimestamp();
 
             channel.send({ embeds: [embed] });
 
             setTimeout(() => {
                 player.disconnect();
-            }, 300000);
+            }, 60000);
         });
     
     
