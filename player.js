@@ -212,7 +212,7 @@ function initializePlayer(client) {
                 .setColor("#0099ff")
                 .setAuthor({
                     name: 'Senarai Tamat',
-                    iconURL: 'https://64.media.tumblr.com/55f80a38a4ec003e4926138cf2831e20/tumblr_om086g92Eq1runoqyo7_250.gif',
+                    iconURL: 'https://cdn.discordapp.com/emojis/867096426194534441.gif?size=48&quality=lossless&name=CWS_Timer%7E1',
                     url: 'https://discord.gg/X6RT5VdJPQ'
                 })
                 .setDescription("**DJ akan meninggalkan channel ini dalam masa 5 minit**")
