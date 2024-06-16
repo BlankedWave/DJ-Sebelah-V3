@@ -215,7 +215,7 @@ function initializePlayer(client) {
                     iconURL: 'https://64.media.tumblr.com/55f80a38a4ec003e4926138cf2831e20/tumblr_om086g92Eq1runoqyo7_250.gif',
                     url: 'https://discord.gg/X6RT5VdJPQ'
                 })
-                .setDescription("**DJ akan meninggalkan channel ini dalam masa 10 minit**")
+                .setDescription("**DJ akan meninggalkan channel ini dalam masa 5 minit**")
                 .setFooter({ text: 'Jemputlah rakan anda untuk mendengar bersama!' })
                 .setTimestamp();
 
@@ -223,7 +223,7 @@ function initializePlayer(client) {
 
             setTimeout(() => {
                 player.disconnect();
-            }, 600000);
+            }, 300000);
         });
     
     
