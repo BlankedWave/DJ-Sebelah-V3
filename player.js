@@ -12,19 +12,19 @@ function initializePlayer(client) {
             secure: true
             */
 
-            
-            host: "lava-v3.ajieblogs.eu.org",
+            /*
+            host: "lava-v4.ajieblogs.eu.org",
             port: 443,
             password: "https://dsc.gg/ajidevserver",
             secure: true
+            */
             
             
-            /*
             host: "37.114.42.191",
             port: 7519,
             password: "danteisnttaken",
             secure: false
-            */
+            
         },
     ];
 
@@ -37,7 +37,7 @@ function initializePlayer(client) {
             if (guild) guild.shard.send(payload);
         },
         defaultSearchPlatform: "ytmsearch",
-        restVersion: "v3"
+        restVersion: "v4"
     });
 
     client.riffy.on("nodeConnect", node => {
