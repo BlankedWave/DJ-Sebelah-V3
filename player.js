@@ -13,7 +13,7 @@ function initializePlayer(client) {
             */
 
             
-            host: "lava-v4.ajieblogs.eu.org",
+            host: "lava-v3.ajieblogs.eu.org",
             port: 443,
             password: "https://dsc.gg/ajidevserver",
             secure: true
@@ -37,7 +37,7 @@ function initializePlayer(client) {
             if (guild) guild.shard.send(payload);
         },
         defaultSearchPlatform: "ytmsearch",
-        restVersion: "v4"
+        restVersion: "v3"
     });
 
     client.riffy.on("nodeConnect", node => {
