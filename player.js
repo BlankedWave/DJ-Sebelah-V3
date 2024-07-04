@@ -13,18 +13,18 @@ function initializePlayer(client) {
             */
 
             
-            host: "lava-v4.ajieblogs.eu.org",
+            // host: "lava-v4.ajieblogs.eu.org",
+            // port: 443,
+            // password: "https://dsc.gg/ajidevserver",
+            // secure: true
+            
+            
+            
+            host: "lavalink.gglvxd.eu.org",
             port: 443,
-            password: "https://dsc.gg/ajidevserver",
+            password: "https://dsc.gg/idiotspawnpoint",
             secure: true
             
-            
-            /*
-            host: "37.114.42.191",
-            port: 7519,
-            password: "danteisnttaken",
-            secure: false
-            */
         },
     ];
 
