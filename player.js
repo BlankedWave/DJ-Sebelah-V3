@@ -98,7 +98,7 @@ function initializePlayer(client) {
 
 
         const filter = i => i.customId === 'loopQueue' || i.customId === 'skipTrack' || i.customId === 'disableLoop' || i.customId === 'showQueue' || i.customId === 'clearQueue';
-        const collector = message.createMessageComponentCollector({ filter, time: 180000 });
+        const collector = message.createMessageComponentCollector({ filter, time: 300000 });
         setTimeout(() => {
             const disabledRow = new ActionRowBuilder()
                 .addComponents(
