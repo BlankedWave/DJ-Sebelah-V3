@@ -89,9 +89,14 @@ function initializePlayer(client) {
             .setLabel("Kosongkan 🗑️")
             .setStyle(ButtonStyle.Danger);
 
+        const leaveButton = new ButtonBuilder()
+            .setCustomId("leaveVoiceChannel")
+            .setLabel("Tinggal 🚪")
+            .setStyle(ButtonStyle.Danger);
+
 
         const actionRow = new ActionRowBuilder()
-            .addComponents(queueLoopButton, disableLoopButton, showQueueButton, clearQueueButton, skipButton);
+            .addComponents(queueLoopButton, disableLoopButton, showQueueButton, clearQueueButton, skipButton, leaveButton);
 
 
         const message = await channel.send({ embeds: [embed], components: [actionRow] });
@@ -217,7 +222,20 @@ function initializePlayer(client) {
     
     
                 await channel.send({ embeds: [queueEmbed] });
-            }
+            }else if (i.customId === 'leaveVoiceChannel') {
+                if (player) {
+                    player.destroy();
+                    const leaveEmbed = new EmbedBuilder()
+                        .setColor("#ff0000")
+                        .setAuthor({
+                            name: 'Bot Tinggal!',
+                            iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157318080670728283/7905-repeat.gif?ex=66383bb4&is=6636ea34&hm=65f37cf88245f1c09285b547fda57b82828b3bbcda855e184f446d6ff43756b3&',
+                            url: 'https://discord.gg/X6RT5VdJPQ'
+                        })
+                        .setDescription('**Bot telah meninggalkan channel suara!**');
+
+                    await channel.send({ embeds: [leaveEmbed] });
+                }
         });
 
 
