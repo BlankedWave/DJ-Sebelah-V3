@@ -98,8 +98,8 @@ await interaction.followUp({ embeds: [embeds[randomIndex]] });
         console.error('Error processing play command:', error);
         const errorEmbed = new EmbedBuilder()
             .setColor('#ff0000')
-            .setTitle('Error')
-            .setDescription('Terdapat ralat ketika memproses lagu anda.');
+            .setTitle('⚠️ Error')
+            .setDescription('Terdapat masalah teknikal yang berlaku, sila cuba lagi nanti...');
 
      
         await interaction.editReply({ embeds: [errorEmbed] });
