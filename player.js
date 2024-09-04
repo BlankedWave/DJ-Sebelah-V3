@@ -70,12 +70,12 @@ function initializePlayer(client) {
 
         const queueLoopButton = new ButtonBuilder()
             .setCustomId("loopQueue")
-            .setLabel("Ulang 🔁")
+            .setLabel("Ulang Lagu 🔁")
             .setStyle(ButtonStyle.Primary);
 
         const disableLoopButton = new ButtonBuilder()
             .setCustomId("disableLoop")
-            .setLabel("Teruskan ➡️")
+            .setLabel("Teruskan Lagu ➡️")
             .setStyle(ButtonStyle.Primary);
 
         const skipButton = new ButtonBuilder()
