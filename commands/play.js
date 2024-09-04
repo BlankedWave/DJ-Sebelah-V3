@@ -98,7 +98,7 @@ await interaction.followUp({ embeds: [embeds[randomIndex]] });
         console.error('Error processing play command:', error);
         const errorEmbed = new EmbedBuilder()
             .setColor('#ff0000')
-            .setTitle('⚠️ Error')
+            .setTitle('⚠️ Ralat')
             .setDescription('Terdapat masalah teknikal yang berlaku, sila cuba lagi nanti...');
 
      
