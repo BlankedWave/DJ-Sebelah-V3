@@ -23,10 +23,10 @@ function initializePlayer(client) {
             // password : "horizxon.tech",
             // secure : true
 
-            host : "lavalinkv4-eu.serenetia.com",
-            port : 443,
+            host : "lavalinkv4-id.serenetia.com",
+            port : 80,
             password : "BatuManaBisa",
-            secure : true
+            secure : false
             
             // host: "lavalink.gglvxd.eu.org",
             // port: 443,
