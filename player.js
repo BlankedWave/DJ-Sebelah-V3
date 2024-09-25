@@ -18,9 +18,14 @@ function initializePlayer(client) {
             // password: "https://dsc.gg/ajidevserver",
             // secure: true
             
-            host : "v4.lavalink.rocks",
+            // host : "v4.lavalink.rocks",
+            // port : 443,
+            // password : "horizxon.tech",
+            // secure : true
+
+            host : "lavalinkv4-eu.serenetia.com",
             port : 443,
-            password : "horizxon.tech",
+            password : "BatuManaBisa",
             secure : true
             
             // host: "lavalink.gglvxd.eu.org",
