@@ -28,7 +28,7 @@ function initializePlayer(client) {
             // password: "https://dsc.gg/idiotspawnpoint",
             // secure: true
 
-            host : lava-all.ajieblogs.eu.org,
+            host : "lava-all.ajieblogs.eu.org",
             port : 80,
             password : "https://dsc.gg/ajidevserver",
             secure : false 
