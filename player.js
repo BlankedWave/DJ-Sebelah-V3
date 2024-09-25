@@ -18,20 +18,20 @@ function initializePlayer(client) {
             // password: "https://dsc.gg/ajidevserver",
             // secure: true
             
-            host : "v4.lavalink.rocks",
-            port : 443,
-            password : "horizxon.tech",
-            secure : true
+            // host : "v4.lavalink.rocks",
+            // port : 443,
+            // password : "horizxon.tech",
+            // secure : true
             
             // host: "lavalink.gglvxd.eu.org",
             // port: 443,
             // password: "https://dsc.gg/idiotspawnpoint",
             // secure: true
 
-            // host : "lava-all.ajieblogs.eu.org",
-            // port : 80,
-            // password : "https://dsc.gg/ajidevserver",
-            // secure : false 
+            host : "lava-all.ajieblogs.eu.org",
+            port : 80,
+            password : "https://dsc.gg/ajidevserver",
+            secure : false 
         },
     ];
 
