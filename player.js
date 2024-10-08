@@ -17,11 +17,18 @@ function initializePlayer(client) {
             // port: 443,
             // password: "https://dsc.gg/ajidevserver",
             // secure: true
-            
-            host : "v4.lavalink.rocks",
-            port : 443,
-            password : "horizxon.tech",
-            secure : true
+
+            //NO LAG
+            // host : "v4.lavalink.rocks",
+            // port : 443,
+            // password : "horizxon.tech",
+            // secure : true
+
+            //SG Server
+            host: "lava1.horizxon.studio",        
+            port: 80,
+            password: "horizxon.studio",
+            secure: false
             
             // host: "lavalink.gglvxd.eu.org",
             // port: 443,
