@@ -40,7 +40,7 @@ function initializePlayer(client) {
             // password : "https://dsc.gg/ajidevserver",
             // secure : false 
 
-            host : "lavalink.clxud.dev"
+            host : "lavalink.clxud.dev",
             port : 2333,
             password : "youshallnotpass",
             secure : false
