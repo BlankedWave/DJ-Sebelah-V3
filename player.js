@@ -19,10 +19,10 @@ function initializePlayer(client) {
             // secure: true
 
             //NO LAG
-            // host : "v4.lavalink.rocks",
-            // port : 443,
-            // password : "horizxon.tech",
-            // secure : true
+            host : "v4.lavalink.rocks",
+            port : 443,
+            password : "horizxon.tech",
+            secure : true
 
             //SG Server
             // host: "lava1.horizxon.studio",        
@@ -41,10 +41,10 @@ function initializePlayer(client) {
             // password : "youshallnotpass",
             // secure : false
 
-            host: "lavalinkv3-id.serenetia.com",
-            port: 443,
-            password: "BatuManaBisa",
-            secure: true
+            // host: "lavalinkv4-id.serenetia.com",
+            // port: 443,
+            // password: "BatuManaBisa",
+            // secure: true
         },
     ];
 
