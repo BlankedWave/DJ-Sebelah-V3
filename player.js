@@ -46,9 +46,9 @@ function initializePlayer(client) {
             // password: "BatuManaBisa",
             // secure: true
 
-            host : "lavalinkv4-id.serenetia.com",
-            port : 80,
-            password : "BatuManaBisa",
+            host : "lavalink.clxud.dev",
+            port : 2333,
+            password : "youshallnotpass",
             secure : false
         },
     ];
