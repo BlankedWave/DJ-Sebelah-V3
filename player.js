@@ -40,10 +40,16 @@ function initializePlayer(client) {
             // password : "https://dsc.gg/ajidevserver",
             // secure : false 
 
-            host : "lavalink.clxud.dev",
-            port : 2333,
-            password : "youshallnotpass",
-            secure : false
+            // Works!!
+            // host : "lavalink.clxud.dev",
+            // port : 2333,
+            // password : "youshallnotpass",
+            // secure : false
+
+            host: "lavalinkv4-id.serenetia.com",
+            port: 443,
+            password: "BatuManaBisa",
+            secure: true
         },
     ];
 
