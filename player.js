@@ -41,7 +41,7 @@ function initializePlayer(client) {
             // password : "youshallnotpass",
             // secure : false
 
-            host: "lavalinkv4-id.serenetia.com",
+            host: "lavalinkv3-id.serenetia.com",
             port: 443,
             password: "BatuManaBisa",
             secure: true
