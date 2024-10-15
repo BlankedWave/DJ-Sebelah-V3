@@ -12,7 +12,7 @@ function initializePlayer(client) {
             secure: true
             */
 
-            // //[ORIGINAL]
+            // //[ORIGINAL][Discontinued]
             // host: "lava-v4.ajieblogs.eu.org",
             // port: 443,
             // password: "https://dsc.gg/ajidevserver",
@@ -34,11 +34,6 @@ function initializePlayer(client) {
             // port: 443,
             // password: "https://dsc.gg/idiotspawnpoint",
             // secure: true
-
-            // host : "lava-all.ajieblogs.eu.org",
-            // port : 80,
-            // password : "https://dsc.gg/ajidevserver",
-            // secure : false 
 
             // Works!!
             // host : "lavalink.clxud.dev",
