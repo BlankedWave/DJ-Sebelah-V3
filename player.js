@@ -46,10 +46,16 @@ function initializePlayer(client) {
             // password: "BatuManaBisa",
             // secure: true
 
-            host : "lavalink.ipv4.oreshi.com",
-            port : 2333,
-            password : "mfkdlgmklmlenrfmklsdmnfkldnslkansdlknfdlksnflksdnkf",
-            secure : false    
+            // // [Recommended]
+            // host : "lavalink.ipv4.oreshi.com",
+            // port : 2333,
+            // password : "mfkdlgmklmlenrfmklsdmnfkldnslkansdlknfdlksnflksdnkf",
+            // secure : false  
+
+            host : "lavav4.prplmoe.me",
+            port : 1118,
+            password : "prplmoe.me",
+            secure : false
         },
     ];
 
