@@ -47,15 +47,15 @@ function initializePlayer(client) {
             // secure: true
 
             // // [Recommended]
-            // host : "lavalink.ipv4.oreshi.com",
-            // port : 2333,
-            // password : "mfkdlgmklmlenrfmklsdmnfkldnslkansdlknfdlksnflksdnkf",
-            // secure : false  
+            host : "lavalink.ipv4.oreshi.com",
+            port : 2333,
+            password : "mfkdlgmklmlenrfmklsdmnfkldnslkansdlknfdlksnflksdnkf",
+            secure : false  
 
-            host : "lavav4.prplmoe.me",
-            port : 1118,
-            password : "prplmoe.me",
-            secure : false
+            // host : "lavav4.prplmoe.me",
+            // port : 1118,
+            // password : "prplmoe.me",
+            // secure : false
         },
     ];
 
