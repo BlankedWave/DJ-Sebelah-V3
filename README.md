@@ -1,13 +1,12 @@
 # PrimeMusic-Lavalink
-LAVALINK BOT
+BOT LAVALINK
 
-Fork the Repositry and add your bot token. Must turn on intents and run the code.
-Use /play to start playing the songs.
+Fork repositori ini dan tambah token bot anda. Pastikan intents diaktifkan dan run kod tersebut.
+Gunakan /play untuk mula memainkan lagu.
 
-# Supports
+# Menyokong
 - YouTube
 - SoundCloud
 - Spotify
 
-Links / Text / Playlists
- 
+Pautan / Teks / Senarai Main
